@@ -1,37 +1,40 @@
 package com.job.model;
-import java.util.Random;
 
 public class Job {
-	private String jobName;
-	private String description;
-	private long jobId;
-	
-	Job(){
-		Random rand = new Random();
-		int rand_int1 = rand.nextInt(1000);
-		this.jobId= (long) rand_int1;
-	}
+    private Long jobId;
+    private String jobName;
+    private String description;
 
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
-	public long getJobId() {
-		return jobId;
-	}
-	
-	public String getJobName() {
-		return jobName;
-	}
-	public void setJobName(String jobName) {
-		this.jobName = jobName;
-	}
+    // Constructors, getters, and setters
+    public Job() {}
 
-	public void add(Job job) {
-		
-	}
+    public Job(Long jobId, String jobName, String description) {
+        this.jobId = jobId;
+        this.jobName = jobName;
+        this.description = description;
+    }
 
+    public Long getJobId() {
+        return jobId;
+    }
+
+    public void setJobId(Long jobId) {
+        this.jobId = jobId;
+    }
+
+    public String getJobName() {
+        return jobName;
+    }
+
+    public void setJobName(String jobName) {
+        this.jobName = jobName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

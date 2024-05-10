@@ -2,13 +2,37 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
     <display-name>JobAPI</display-name>
   
+    
     <servlet>
         <servlet-name>JobApi</servlet-name>
-        <servlet-class>com.job.JobApi</servlet-class>
+        <servlet-class>com.job.services.JobService</servlet-class>
     </servlet>
+    
     
     <servlet-mapping>
         <servlet-name>JobApi</servlet-name>
         <url-pattern>/jobs</url-pattern>
+    </servlet-mapping>
+
+   
+    <servlet>
+        <servlet-name>UserApi</servlet-name>
+        <servlet-class>com.job.services.UserService</servlet-class>
+    </servlet>
+    
+ 
+    <servlet-mapping>
+        <servlet-name>UserApi</servlet-name>
+        <url-pattern>/api/user</url-pattern>
+    </servlet-mapping>
+    
+      <servlet>
+        <servlet-name>OrganizationApi</servlet-name>
+        <servlet-class>com.job.services.OrganizationService</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>OrganizationApi</servlet-name>
+        <url-pattern>/api/organization</url-pattern>
     </servlet-mapping>
 </web-app>

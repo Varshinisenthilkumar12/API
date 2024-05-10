@@ -1,5 +1,4 @@
 package com.job;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import javax.servlet.http.HttpServlet;
@@ -9,10 +8,7 @@ import org.json.JSONObject;
 import com.job.services.JobService;
 import com.job.model.Job;
 
-@SuppressWarnings("serial")
 public class JobApi extends HttpServlet {
-    
-    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         try {
             String jobId = req.getParameter("id");
@@ -29,7 +25,6 @@ public class JobApi extends HttpServlet {
         }
     }
 
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
         try {
             BufferedReader reader = req.getReader();
@@ -49,5 +44,4 @@ public class JobApi extends HttpServlet {
             res.getWriter().append("Error adding job: " + e.getMessage());
         }
     }
-
 }

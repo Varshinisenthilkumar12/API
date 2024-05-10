@@ -5,7 +5,6 @@ public class Job {
     private String jobName;
     private String description;
 
-    // Constructors, getters, and setters
     public Job() {}
 
     public Job(Long jobId, String jobName, String description) {

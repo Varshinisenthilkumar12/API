@@ -1,5 +1,4 @@
 package com.job.services;
-
 import java.util.ArrayList;
 import com.job.model.Job;
 
